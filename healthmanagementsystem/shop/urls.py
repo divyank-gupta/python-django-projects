@@ -1,4 +1,4 @@
-"""healthmanagementsystem URL Configuration
+"""mac URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -14,10 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path,include
+from django.urls import path
 from . import views
 
 urlpatterns = [
     path('', views.index, name='ShopHome'),
     path('about/', views.about, name='AboutUs'),
+    path('contact/', views.contact, name='ContactUs'),
+    path('tracker/', views.tracker, name='TrackingStatus'),
+    path('search/', views.search, name='Search'),
+    path('productview/', views.productView, name='ProductView'),
+    path('checkout/', views.checkout, name='Checkout'),
 ]
